@@ -102,6 +102,17 @@ async function main() {
     [...readmeEn.matchAll(/github\.com\/([\w.-]+\/[\w.-]+)/gi)].map((m) => m[1].toLowerCase()),
   );
 
+  // Repos already reviewed and rejected (scripts/trending-ignore.txt).
+  try {
+    const ignored = await readFile(new URL("./trending-ignore.txt", import.meta.url), "utf8");
+    for (const line of ignored.split(/\r?\n/)) {
+      const id = line.trim().toLowerCase();
+      if (id && !id.startsWith("#")) existing.add(id);
+    }
+  } catch {
+    /* no ignore file: nothing to skip */
+  }
+
   const result = {};
   const seen = new Set();
   for (const [key, group] of Object.entries(GROUPS)) {

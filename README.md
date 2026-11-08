@@ -86,6 +86,7 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 ### Recon & OSINT
 
 - [Amass](https://github.com/owasp-amass/amass) - Attack surface mapping and asset discovery.
+- [CVEngine](https://github.com/hevnsnt/CVEngine) - Self-hosted attack surface assessment that validates which exploited CVEs actually affect you.
 - [httpx](https://github.com/projectdiscovery/httpx) - Fast HTTP probing toolkit.
 - [Recon-ng](https://github.com/lanmaster53/recon-ng) - Web reconnaissance framework.
 - [Sherlock](https://github.com/sherlock-project/sherlock) - Hunt usernames across social networks.
@@ -114,6 +115,7 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 
 ### Practice Labs
 
+- [Clouds Against Humanity](https://github.com/ChiefGyk3D/Clouds-Against-Humanity) - Homelab that teaches cloud security, zero trust and DevSecOps by building it.
 - [DVWA](https://github.com/digininja/DVWA) - Damn Vulnerable Web Application.
 - [Juice Shop](https://github.com/juice-shop/juice-shop) - Intentionally insecure modern web app.
 - [WebGoat](https://github.com/WebGoat/WebGoat) - Deliberately insecure app to learn web security.
@@ -121,6 +123,7 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 ### Knowledge Bases
 
 - [Awesome Pentest](https://github.com/enaqx/awesome-pentest) - Curated pentesting resources.
+- [Awesome REA](https://github.com/reacher-z/Awesome-REA) - Curated tools, case studies and papers for reverse engineering websites, apps, binaries and firmware.
 - [Awesome Security](https://github.com/sbilly/awesome-security) - Curated security resources.
 - [HackTricks](https://github.com/carlospolop/hacktricks) - Hacking techniques and tricks.
 - [OWASP Cheat Sheet Series](https://github.com/OWASP/CheatSheetSeries) - Concise application security guidance.
@@ -147,6 +150,7 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 - [llama.cpp](https://github.com/ggml-org/llama.cpp) - LLM inference in C/C++.
 - [LangChain](https://github.com/langchain-ai/langchain) - Framework for LLM-powered applications.
 - [Ollama](https://github.com/ollama/ollama) - Run LLMs locally.
+- [TokenEconomizer](https://github.com/microsoft/TokenEconomizer) - Microsoft Research: experience-driven cost control for coding agents.
 - [Vercel AI SDK](https://github.com/vercel/ai) - TypeScript toolkit for AI applications.
 
 ## Agent Skills & MCP
@@ -210,6 +214,7 @@ The minimum set of skills, plugins and MCP servers to build a professional web a
 
 ### Web Development Skills
 
+- [Reanimate](https://github.com/NiazMorshed2007/reanimate) - Agent skill that reverse-engineers web animations frame by frame and verifies the copy.
 - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) - Vercel's official collection of agent skills.
 
 ### Security Skills

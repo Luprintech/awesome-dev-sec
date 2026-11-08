@@ -86,6 +86,7 @@
 ### Reconocimiento y OSINT
 
 - [Amass](https://github.com/owasp-amass/amass) - Mapeo de superficie de ataque y descubrimiento de activos.
+- [CVEngine](https://github.com/hevnsnt/CVEngine) - Evaluación de superficie de ataque autoalojada que valida qué CVEs explotados te afectan de verdad.
 - [httpx](https://github.com/projectdiscovery/httpx) - Toolkit rápido de sondeo HTTP.
 - [Recon-ng](https://github.com/lanmaster53/recon-ng) - Framework de reconocimiento web.
 - [Sherlock](https://github.com/sherlock-project/sherlock) - Busca nombres de usuario en redes sociales.
@@ -114,6 +115,7 @@
 
 ### Laboratorios de práctica
 
+- [Clouds Against Humanity](https://github.com/ChiefGyk3D/Clouds-Against-Humanity) - Homelab que enseña seguridad cloud, zero trust y DevSecOps construyéndolo.
 - [DVWA](https://github.com/digininja/DVWA) - Aplicación web deliberadamente vulnerable.
 - [Juice Shop](https://github.com/juice-shop/juice-shop) - App web moderna intencionadamente insegura.
 - [WebGoat](https://github.com/WebGoat/WebGoat) - App insegura a propósito para aprender seguridad web.
@@ -121,6 +123,7 @@
 ### Bases de conocimiento
 
 - [Awesome Pentest](https://github.com/enaqx/awesome-pentest) - Recursos de pentesting.
+- [Awesome REA](https://github.com/reacher-z/Awesome-REA) - Herramientas, casos de estudio y papers curados sobre ingeniería inversa de webs, apps, binarios y firmware.
 - [Awesome Security](https://github.com/sbilly/awesome-security) - Recursos de seguridad.
 - [HackTricks](https://github.com/carlospolop/hacktricks) - Técnicas y trucos de hacking.
 - [OWASP Cheat Sheet Series](https://github.com/OWASP/CheatSheetSeries) - Guías concisas de seguridad de aplicaciones.
@@ -147,6 +150,7 @@
 - [llama.cpp](https://github.com/ggml-org/llama.cpp) - Inferencia de LLMs en C/C++.
 - [LangChain](https://github.com/langchain-ai/langchain) - Framework para aplicaciones con LLMs.
 - [Ollama](https://github.com/ollama/ollama) - Ejecuta LLMs en local.
+- [TokenEconomizer](https://github.com/microsoft/TokenEconomizer) - Microsoft Research: control de costes de agentes de programación basado en la experiencia.
 - [Vercel AI SDK](https://github.com/vercel/ai) - Toolkit TypeScript para aplicaciones de IA.
 
 ## Skills de agentes y MCP
@@ -210,6 +214,7 @@ El conjunto mínimo de skills, plugins y servidores MCP para construir una app w
 
 ### Skills de desarrollo web
 
+- [Reanimate](https://github.com/NiazMorshed2007/reanimate) - Skill de agente que hace ingeniería inversa de animaciones web fotograma a fotograma y verifica la copia.
 - [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) - Colección oficial de skills de Vercel.
 
 ### Skills de seguridad

@@ -1,0 +1,13 @@
+# Repos reviewed and rejected: the trending script never proposes them again.
+# One "owner/name" per line. Lines starting with # are comments.
+
+# Off-topic (not web, security, DevOps or AI tooling)
+D3voz/openjutsu
+marclou/mailcheap
+agharsallah/esp-labs-web
+Leonxlnx/earshot
+daveebbelaar/bama
+
+# Too new / unproven or commercial
+reason-machines/reason-network
+juliobsz/skills
