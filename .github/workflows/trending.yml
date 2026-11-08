@@ -1,0 +1,34 @@
+name: Update trending
+
+on:
+  schedule:
+    - cron: "0 7 * * 1" # Mondays 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  trending:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Find trending repos
+        run: node scripts/update-trending.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/trending
+          commit-message: "chore: update trending repos"
+          title: "chore: update trending repos"
+          body: |
+            Weekly auto-detected candidates. Review before merging:
+            - Check each repo is legitimate and not malicious/spam.
+            - Promote good ones to a proper section in **both** READMEs.
+          delete-branch: true
