@@ -27,6 +27,11 @@ const GROUPS = {
     es: "IA y LLMs",
     topics: ["llm", "ai-agents"],
   },
+  skills: {
+    en: "Agent Skills & MCP",
+    es: "Skills de agentes y MCP",
+    topics: ["claude-skills", "agent-skills", "claude-code", "mcp-server"],
+  },
 };
 
 const FILES = [

@@ -21,6 +21,11 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
   - [Knowledge Bases](#knowledge-bases)
 - [DevOps & Infrastructure](#devops--infrastructure)
 - [AI & LLMs](#ai--llms)
+- [Agent Skills & MCP](#agent-skills--mcp)
+  - [Core & Collections](#core--collections)
+  - [Curated Lists](#curated-lists)
+  - [Web Development Skills](#web-development-skills)
+  - [Security Skills](#security-skills)
 - [Learning Resources](#learning-resources)
 - [Trending (auto)](#trending-auto)
 
@@ -142,6 +147,39 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 - [LangChain](https://github.com/langchain-ai/langchain) - Framework for LLM-powered applications.
 - [Ollama](https://github.com/ollama/ollama) - Run LLMs locally.
 - [Vercel AI SDK](https://github.com/vercel/ai) - TypeScript toolkit for AI applications.
+
+## Agent Skills & MCP
+
+Reusable skills, agents and tool servers for AI coding agents (Claude Code, Cursor, Codex and others).
+
+### Core & Collections
+
+- [Agent Skills (Anthropic)](https://github.com/anthropics/skills) - Official public repository of Agent Skills.
+- [Claude Code](https://github.com/anthropics/claude-code) - Agentic coding tool that lives in your terminal.
+- [MCP Reference Servers](https://github.com/modelcontextprotocol/servers) - Reference Model Context Protocol servers.
+- [Skills CLI](https://github.com/vercel-labs/skills) - The open agent skills tool (`npx skills`).
+- [Superpowers](https://github.com/obra/superpowers) - Agentic skills framework and development methodology.
+- [wshobson/agents](https://github.com/wshobson/agents) - Plugins, agents, skills and commands for coding agents.
+
+### Curated Lists
+
+- [Awesome Agent Skills](https://github.com/VoltAgent/awesome-agent-skills) - 1000+ agent skills from official teams and the community.
+- [Awesome Claude Code](https://github.com/hesreallyhim/awesome-claude-code) - Hand-picked resources for Claude Code.
+- [Awesome Claude Code Subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) - 100+ specialized subagents for development.
+- [Awesome Claude Skills (ComposioHQ)](https://github.com/ComposioHQ/awesome-claude-skills) - Curated Claude Skills, resources and tools.
+- [Awesome Claude Skills (travisvn)](https://github.com/travisvn/awesome-claude-skills) - Curated list of Claude Skills and tools.
+- [Awesome MCP Servers](https://github.com/punkpeye/awesome-mcp-servers) - A collection of MCP servers.
+
+### Web Development Skills
+
+- [Vercel Agent Skills](https://github.com/vercel-labs/agent-skills) - Vercel's official collection of agent skills.
+
+### Security Skills
+
+- [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) - 800+ community cybersecurity skills mapped to MITRE ATT&CK and NIST.
+- [Claude-Code-CyberSecurity-Skill](https://github.com/Masriyan/Claude-Code-CyberSecurity-Skill) - 22 skills for offensive and defensive security work.
+- [Community Tools](https://github.com/transilienceai/communitytools) - Skills and agents for penetration testing and bug bounty.
+- [Trail of Bits Skills](https://github.com/trailofbits/skills) - Skills for security research, vulnerability detection and audits.
 
 ## Learning Resources
 
