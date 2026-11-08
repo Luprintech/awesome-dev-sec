@@ -22,6 +22,7 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 - [DevOps & Infrastructure](#devops--infrastructure)
 - [AI & LLMs](#ai--llms)
 - [Agent Skills & MCP](#agent-skills--mcp)
+  - [Essential Web Toolkit](#essential-web-toolkit)
   - [Core & Collections](#core--collections)
   - [Curated Lists](#curated-lists)
   - [Web Development Skills](#web-development-skills)
@@ -151,6 +152,43 @@ Contributions are welcome! Please read the [contribution guidelines](CONTRIBUTIN
 ## Agent Skills & MCP
 
 Reusable skills, agents and tool servers for AI coding agents (Claude Code, Cursor, Codex and others).
+
+### Essential Web Toolkit
+
+The minimum set of skills, plugins and MCP servers to build a professional web app with an AI coding agent, from idea to deploy.
+
+#### Design
+
+- [Anthropic Knowledge Work Plugins](https://github.com/anthropics/knowledge-work-plugins) - Includes the `design` plugin: critique, accessibility review, UX copy and handoff.
+- [Claude Plugins (official)](https://github.com/anthropics/claude-plugins-official) - Anthropic-managed directory of plugins, including `frontend-design`.
+- [Impeccable](https://github.com/pbakaus/impeccable) - Design vocabulary for your agent: steer, critique, polish and audit frontends.
+- [UI UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) - Design intelligence that generates a full design system per product type.
+
+#### SEO
+
+- [Claude SEO](https://github.com/AgriciDaniel/claude-seo) - SEO skill with sub-skills and agents for technical SEO, E-E-A-T, schema and GEO.
+
+#### Build
+
+- [Cloudflare Skills](https://github.com/cloudflare/skills) - Skills for building and deploying on Cloudflare.
+- [Supabase Agent Skills](https://github.com/supabase/agent-skills) - Skills for working with Supabase: Postgres, RLS and auth.
+- [Ultrapowers](https://github.com/ennio-datatide/ultrapowers) - Marketplace with `ultrapowers-dev`: 54 best-practice skills for languages and frameworks.
+- [Vercel Plugin](https://github.com/vercel/vercel-plugin) - Vercel ecosystem plugin with skills for deploys, env vars and frameworks.
+
+#### Connectors (MCP)
+
+- [GitHub MCP Server](https://github.com/github/github-mcp-server) - GitHub's official MCP server for repos, issues, PRs and CI.
+- [Playwright MCP](https://github.com/microsoft/playwright-mcp) - Browser control through accessibility snapshots.
+- [Supabase MCP](https://github.com/supabase-community/supabase-mcp) - Connect Supabase projects to your AI assistant.
+
+#### Verify
+
+- [Axe MCP Server](https://github.com/dequelabs/axe-mcp-server-public) - Deque's MCP server for accessibility testing and remediation.
+- [Claude Code Plugins (petrovicistefan)](https://github.com/petrovicistefan/claude-code-plugins) - Plugin bundle with `e2e-test-generator`, `ci-optimizer` and `i18n-sync`.
+
+#### Data
+
+- [Scrapling](https://github.com/D4Vinci/Scrapling) - Web scraping framework with fetchers, spiders, CLI and MCP server.
 
 ### Core & Collections
 
