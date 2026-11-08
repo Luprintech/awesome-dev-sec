@@ -231,6 +231,31 @@ The minimum set of skills, plugins and MCP servers to build a professional web a
 ## Trending (auto)
 
 <!-- TRENDING:START -->
+_Auto-detected weekly (new repos from the last 30 days, ≥ 500 ⭐). Not reviewed: promote the good ones to a proper section. Last update: 2026-11-08._
+
+**Web Development**
+
+- [D3voz/openjutsu](https://github.com/D3voz/openjutsu) - One-click character swap for videos: an open-source, local Higgsfield Genjutsu alternative built on ComfyUI…. ⭐ 1.9k
+- [marclou/mailcheap](https://github.com/marclou/mailcheap) - Newsletters where you pay for the emails you send, not for dormant subscribers, at a fraction of the price of…. ⭐ 1.7k
+- [NiazMorshed2007/reanimate](https://github.com/NiazMorshed2007/reanimate) - A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same. ⭐ 1.4k
+- [juliobsz/skills](https://github.com/juliobsz/skills) - An agent skill that builds award-caliber websites from one line. ⭐ 1.2k
+- [agharsallah/esp-labs-web](https://github.com/agharsallah/esp-labs-web) - The ESP32-S3 bench guide as a React app: live pinout, lessons with interactive simulators, a code reader for…. ⭐ 692
+
+**Cybersecurity**
+
+- [ChiefGyk3D/Clouds-Against-Humanity](https://github.com/ChiefGyk3D/Clouds-Against-Humanity) - Learn cloud security by building it! An open-source homelab teaching Zero Trust, DevSecOps, IaC, and cloud…. ⭐ 958
+- [hevnsnt/CVEngine](https://github.com/hevnsnt/CVEngine) - AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability…. ⭐ 689
+
+**AI & LLMs**
+
+- [microsoft/TokenEconomizer](https://github.com/microsoft/TokenEconomizer) - Experience-Driven Black-Box Cost Control for Coding Agents. ⭐ 5.0k
+- [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) - Ears for coding agents: let AI hear, review and make sound. CPU-only, open source. ⭐ 4.2k
+- [reacher-z/Awesome-REA](https://github.com/reacher-z/Awesome-REA) - Curated tools, case studies and papers for reverse engineering websites, games, apps, binaries, firmware and…. ⭐ 2.0k
+- [daveebbelaar/bama](https://github.com/daveebbelaar/bama) - BAMA: Build Any Mac App. Agent skills to research, clone, design, build, optimize, and test native macOS apps…. ⭐ 1.7k
+
+**Agent Skills & MCP**
+
+- [reason-machines/reason-network](https://github.com/reason-machines/reason-network) - Reason Network: your team's coding agents, talking to each other. The engine behind reason network. ⭐ 1.7k
 <!-- TRENDING:END -->
 
 ---
