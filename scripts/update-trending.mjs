@@ -7,7 +7,8 @@ import { readFile, writeFile } from "node:fs/promises";
 
 // ---- Config ---------------------------------------------------------------
 const DAYS = 30; // only repos created in the last N days
-const MIN_STARS = 300; // minimum stars to be considered
+const MIN_STARS = 500; // minimum stars to be considered
+const MIN_FORK_RATIO = 0.04; // forks/stars; very low ratios usually mean inflated stars
 const PER_TOPIC = 5; // max candidates fetched per topic
 const MAX_PER_GROUP = 8; // max items shown per group
 
@@ -31,6 +32,8 @@ const GROUPS = {
     en: "Agent Skills & MCP",
     es: "Skills de agentes y MCP",
     topics: ["claude-skills", "agent-skills", "claude-code", "mcp-server"],
+    // These topics are broad; keep only what relates to web, security or dev workflows.
+    must: /\b(web|website|frontend|front-end|ui|ux|design|css|react|next\.?js|api|browser|security|pentest|vulnerab|mcp|deploy|devops|testing|tests?|code review|coding agents?|developer)\b/i,
   },
 };
 
@@ -53,10 +56,17 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function search(topic, since) {
   const q = `topic:${topic} created:>${since} stars:>=${MIN_STARS} fork:false archived:false`;
   const url = `https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&order=desc&per_page=${PER_TOPIC}`;
-  const res = await fetch(url, { headers });
+  let res = await fetch(url, { headers });
   if (res.status === 403 || res.status === 429) {
-    console.warn(`Rate limited on topic "${topic}", skipping.`);
-    return [];
+    // Search API allows 30 requests/min: wait for the window to reset and retry once.
+    const wait = Math.min(Number(res.headers.get("retry-after")) || 62, 90);
+    console.warn(`Rate limited on "${topic}", waiting ${wait}s…`);
+    await sleep(wait * 1000);
+    res = await fetch(url, { headers });
+    if (res.status === 403 || res.status === 429) {
+      console.warn(`Still rate limited on "${topic}", skipping.`);
+      return [];
+    }
   }
   if (!res.ok) throw new Error(`GitHub API ${res.status} for topic ${topic}`);
   return (await res.json()).items ?? [];
@@ -80,7 +90,8 @@ function short(text, max = 110) {
 
 // Keep the list readable and safe: mostly-English descriptions, no obvious abuse tooling.
 const mostlyAscii = (s) => s.length > 0 && (s.match(/[\x20-\x7E]/g) ?? []).length / s.length > 0.9;
-const BLOCKLIST = /jailbreak|cheat|crack(ed)?\b|keygen|stealer|ransomware|bypass paywall/i;
+const BLOCKLIST =
+  /jailbreak|cheat|crack(ed)?\b|keygen|stealer|ransomware|bypass paywall|doxx|discord|telegram|whatsapp|stolen|wallet|crypto|trading|trader|casino|betting|iptv|\btv\b|android|ios app|tiktok|instagram|onlyfans|grok|dots\b/i;
 
 const formatStars = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n));
 
@@ -100,6 +111,9 @@ async function main() {
         const id = repo.full_name.toLowerCase();
         if (existing.has(id) || seen.has(id) || !repo.description) continue;
         if (!mostlyAscii(repo.description) || BLOCKLIST.test(`${repo.name} ${repo.description}`)) continue;
+        if (group.must && !group.must.test(`${repo.name} ${repo.description}`)) continue;
+        if (!repo.license) continue; // no license: not safe to recommend
+        if (repo.forks_count / repo.stargazers_count < MIN_FORK_RATIO) continue;
         seen.add(id);
         items.push(repo);
       }

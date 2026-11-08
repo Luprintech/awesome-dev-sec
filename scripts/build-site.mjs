@@ -21,6 +21,7 @@ const LANGS = {
       search: "Search repositories…",
       repos: "repos",
       results: "results",
+      result: "result",
       empty: "No repositories match your search.",
       contents: "Contents",
       github: "View on GitHub",
@@ -40,6 +41,7 @@ const LANGS = {
       search: "Buscar repositorios…",
       repos: "repos",
       results: "resultados",
+      result: "resultado",
       empty: "Ningún repositorio coincide con tu búsqueda.",
       contents: "Contenido",
       github: "Ver en GitHub",
@@ -97,6 +99,50 @@ function parse(markdown) {
   return doc;
 }
 
+// Star counts, fetched once per build with a single batched GraphQL call per 40 repos.
+// Best effort: without GITHUB_TOKEN (or if the API fails) the site is built without stars.
+const STARS = new Map();
+
+const formatStars = (n) => (n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, "")}k` : String(n));
+const starsHtml = (n) =>
+  typeof n === "number" ? `<span class="stars" title="GitHub stars">★ ${formatStars(n)}</span>` : "";
+
+async function fetchStars(repos) {
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (!token) {
+    console.warn("No GITHUB_TOKEN: building without star counts.");
+    return;
+  }
+  const list = [...repos].filter((r) => /^[\w.-]+\/[\w.-]+$/.test(r));
+  for (let i = 0; i < list.length; i += 40) {
+    const chunk = list.slice(i, i + 40);
+    const query =
+      "query{" +
+      chunk
+        .map((r, j) => {
+          const [o, n] = r.split("/");
+          return `r${j}:repository(owner:"${o}",name:"${n}"){stargazerCount}`;
+        })
+        .join(" ") +
+      "}";
+    try {
+      const res = await fetch("https://api.github.com/graphql", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json", "User-Agent": "awesome-dev-sec-site" },
+        body: JSON.stringify({ query }),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const json = await res.json();
+      chunk.forEach((r, j) => {
+        const s = json.data?.[`r${j}`]?.stargazerCount;
+        if (typeof s === "number") STARS.set(r.toLowerCase(), s);
+      });
+    } catch (err) {
+      console.warn(`Could not fetch stars: ${err.message}`);
+    }
+  }
+}
+
 function render(doc) {
   const used = new Set();
   const slug = (text) => {
@@ -144,7 +190,7 @@ function render(doc) {
       body +=
         `<li class="card" data-q="${q}">` +
         `<a class="name" href="${n.url}" target="_blank" rel="noopener noreferrer">${esc(n.name)}</a>` +
-        `<span class="repo">${esc(label)}</span>` +
+        `<div class="row"><span class="repo">${esc(label)}</span>${starsHtml(m && STARS.get(m[1].toLowerCase()))}</div>` +
         `<p>${inline(n.desc, { links: false })}</p></li>`;
     }
   }
@@ -196,7 +242,9 @@ ul.cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:r
 .card .name{font-weight:650;text-decoration:none;word-break:break-word}
 .card .name::after{content:"";position:absolute;inset:0;border-radius:12px}
 .card .name:focus-visible{outline:none}.card:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.card .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
 .card .repo{font:12px/1.3 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--muted);word-break:break-all}
+.card .stars{font-size:12px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
 .card p{margin:6px 0 0;font-size:14.5px;color:var(--muted)}
 #empty{padding:40px 0;text-align:center;color:var(--muted)}
 footer{max-width:1240px;margin:24px auto 0;padding:24px 16px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
@@ -215,7 +263,7 @@ function page(key, doc, { body, nav, cards }) {
   const L = LANGS[key];
   const o = L.other;
   const total = `${cards} ${L.ui.repos}`;
-  const data = JSON.stringify({ total: cards, repos: L.ui.repos, results: L.ui.results });
+  const data = JSON.stringify({ total: cards, repos: L.ui.repos, results: L.ui.results, result: L.ui.result });
   const alt = (code, url) => `<link rel="alternate" hreflang="${code}" href="${url}">`;
   return `<!doctype html>
 <html lang="${L.html}">
@@ -262,7 +310,7 @@ ${alt("es", LANGS.es.url)}
   var v=q.value.trim().toLowerCase(),shown=0;
   cards.forEach(function(c){var ok=!v||c.getAttribute("data-q").indexOf(v)>-1;c.hidden=!ok;if(ok)shown++;});
   secs.forEach(function(s){s.hidden=!!v&&!s.querySelector(".card:not([hidden])");});
-  count.textContent=(v?shown:D.total)+" "+(v?D.results:D.repos);
+  count.textContent=(v?shown:D.total)+" "+(v?(shown===1?D.result:D.results):D.repos);
   empty.hidden=!(v&&shown===0);
  }
  q.addEventListener("input",run);
@@ -284,9 +332,21 @@ ${alt("es", LANGS.es.url)}
 `;
 }
 
+const docs = {};
+const repoSet = new Set();
+for (const key of Object.keys(LANGS)) {
+  docs[key] = parse(await readFile(LANGS[key].file, "utf8"));
+  for (const n of docs[key].nodes) {
+    const m = n.t === "li" && n.url.match(/github\.com\/([^/]+\/[^/#?]+)/);
+    if (m) repoSet.add(m[1]);
+  }
+}
+await fetchStars(repoSet);
+console.log(`stars: ${STARS.size}/${repoSet.size} repos`);
+
 for (const key of Object.keys(LANGS)) {
   const L = LANGS[key];
-  const doc = parse(await readFile(L.file, "utf8"));
+  const doc = docs[key];
   const rendered = render(doc);
   const out = L.out;
   await mkdir(out.replace(/\/[^/]+$/, ""), { recursive: true });
