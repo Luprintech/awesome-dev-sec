@@ -15,9 +15,11 @@ jobs:
       - name: Check links in Markdown files
         uses: lycheeverse/lychee-action@v2
         with:
-          # The site URL is excluded: on push it is checked while still deploying (404).
+          # Excluded: our own site (checked while still deploying, so 404 on push)
+          # and awesome.re (its server breaks lychee's HTTP/2 client; fine in browsers).
           args: >-
             --no-progress --accept 200,429
             --exclude "luprintech.github.io"
+            --exclude "awesome.re"
             "./**/*.md"
           fail: true
