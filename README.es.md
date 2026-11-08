@@ -2,7 +2,7 @@
 
 > Lista curada de repositorios de GitHub para **desarrollo web**, **ciberseguridad**, **DevOps** y más.
 
-🌐 **Idiomas:** [English](README.md) · Español
+🌐 **Idiomas:** [English](README.md) · Español · 🔎 **[Web](https://luprintech.github.io/awesome-dev-sec/es/)**
 
 ¡Las contribuciones son bienvenidas! Lee primero la [guía de contribución](CONTRIBUTING.md).
 
