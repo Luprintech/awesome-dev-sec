@@ -231,6 +231,49 @@ The minimum set of skills, plugins and MCP servers to build a professional web a
 ## Trending (auto)
 
 <!-- TRENDING:START -->
+_Auto-detected weekly (new repos from the last 30 days, ≥ 300 ⭐). Not reviewed: promote the good ones to a proper section. Last update: 2026-11-08._
+
+**Web Development**
+
+- [deeplethe/solid-glass](https://github.com/deeplethe/solid-glass) - A design system for AI applications. Material, physical, tactile, technical. ⭐ 2.0k
+- [D3voz/openjutsu](https://github.com/D3voz/openjutsu) - One-click character swap for videos: an open-source, local Higgsfield Genjutsu alternative built on ComfyUI…. ⭐ 1.9k
+- [marclou/mailcheap](https://github.com/marclou/mailcheap) - Newsletters where you pay for the emails you send, not for dormant subscribers, at a fraction of the price of…. ⭐ 1.7k
+- [NiazMorshed2007/reanimate](https://github.com/NiazMorshed2007/reanimate) - A Claude Code skill that reverse-engineers any animation frame by frame, then proves the copy moves the same. ⭐ 1.4k
+- [juliobsz/skills](https://github.com/juliobsz/skills) - An agent skill that builds award-caliber websites from one line. ⭐ 1.2k
+- [agharsallah/esp-labs-web](https://github.com/agharsallah/esp-labs-web) - The ESP32-S3 bench guide as a React app: live pinout, lessons with interactive simulators, a code reader for…. ⭐ 692
+- [SouravBeraAkaSpeed/xiryn](https://github.com/SouravBeraAkaSpeed/xiryn) - Xiryn — the open-source personal agent. Does everything Muse, Grok Bot and Dots do, on your own computer:…. ⭐ 429
+- [abdiraimov-otabek/dashboard-design-skill](https://github.com/abdiraimov-otabek/dashboard-design-skill) - A Claude Code skill for clean, honest dashboard UI: KPI tiles, charts, date pickers, ranked lists, states,…. ⭐ 410
+
+**Cybersecurity**
+
+- [ChiefGyk3D/Clouds-Against-Humanity](https://github.com/ChiefGyk3D/Clouds-Against-Humanity) - Learn cloud security by building it! An open-source homelab teaching Zero Trust, DevSecOps, IaC, and cloud…. ⭐ 957
+- [hevnsnt/CVEngine](https://github.com/hevnsnt/CVEngine) - AI-first external attack surface assessment with continuous discovery, evidence-based vulnerability…. ⭐ 689
+- [arpanjot-coding/AVault](https://github.com/arpanjot-coding/AVault) - AVault - Call Recorder (No Root Required) Privacy-first, hardware-encrypted audio vault for Android 12-16+.…. ⭐ 622
+- [1337isnot1337/DOPPLERGEIST](https://github.com/1337isnot1337/DOPPLERGEIST) - Python tool for aircraft Doppler audio geolocation using historical ADS-B flight data (Source-available). ⭐ 447
+- [opentrap/opentrap](https://github.com/opentrap/opentrap) - A free, open-source alternative to Burp Suite: an intercepting proxy and web app security testing suite with…. ⭐ 429
+- [lordbasex/LordOS](https://github.com/lordbasex/LordOS) - LordOS — a free, fast and secure GNU/Linux distribution based on Debian, with its own desktop environment:…. ⭐ 427
+- [PatchBuilderAmplify/stolen-crypto-tracer](https://github.com/PatchBuilderAmplify/stolen-crypto-tracer) - Paste a wallet or a transaction hash and follow stolen crypto to the exchange that can freeze it. Works…. ⭐ 389
+- [Tropicaldrescoop/discord-id-osint-checker](https://github.com/Tropicaldrescoop/discord-id-osint-checker) - Free OSINT app for Discord IDs: paste a user, server or invite and see when it was made and who it copies. ⭐ 381
+
+**AI & LLMs**
+
+- [wangzan101/Mika](https://github.com/wangzan101/Mika) - An on-device AI agent for Android that operates apps and the web to get things done for you. ⭐ 7.7k
+- [microsoft/TokenEconomizer](https://github.com/microsoft/TokenEconomizer) - Experience-Driven Black-Box Cost Control for Coding Agents. ⭐ 5.0k
+- [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) - Ears for coding agents: let AI hear, review and make sound. CPU-only, open source. ⭐ 4.2k
+- [modelflare-ai/AnyModelBot](https://github.com/modelflare-ai/AnyModelBot) - 🤖 Open-source, local-first alternative to Grok Bot, OpenAI dots and Claude Duet. Your own AI bots on any…. ⭐ 2.7k
+- [reacher-z/Awesome-REA](https://github.com/reacher-z/Awesome-REA) - Curated tools, case studies and papers for reverse engineering websites, games, apps, binaries, firmware and…. ⭐ 1.9k
+- [daveebbelaar/bama](https://github.com/daveebbelaar/bama) - BAMA: Build Any Mac App. Agent skills to research, clone, design, build, optimize, and test native macOS apps…. ⭐ 1.7k
+
+**Agent Skills & MCP**
+
+- [Gathin23/cleanyourtv](https://github.com/Gathin23/cleanyourtv) - Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home. ⭐ 54.3k
+- [Jakeschincariol/day-trader-skill](https://github.com/Jakeschincariol/day-trader-skill) - 11 Claude skills for day trading: scan thousands of charts, track breaking news, time every entry and exit,…. ⭐ 6.1k
+- [simbasjungles/free-my-tv](https://github.com/simbasjungles/free-my-tv) - A fast, ad-free home screen for Google TV, LG webOS and Samsung Tizen. One button to undo. ⭐ 6.1k
+- [patch-gg/pixelfx](https://github.com/patch-gg/pixelfx) - 244 pixel art effects, every one a small piece of code. Plus a Claude Code skill to make your own. ⭐ 6.0k
+- [JuneYaooo/rea-video](https://github.com/JuneYaooo/rea-video) - Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. ⭐ 4.0k
+- [qybaihe/bla](https://github.com/qybaihe/bla) - 🛡️ BLA (Blind LLM Agents) — Adversarial defense shield that protects binaries, Electron apps, JS bundles,…. ⭐ 3.3k
+- [shaongitbd/doory](https://github.com/shaongitbd/doory) - Open source canva alternative. ⭐ 2.5k
+- [DenisSergeevitch/ex-ussr-kinship-research](https://github.com/DenisSergeevitch/ex-ussr-kinship-research) - Evidence-first genealogy skill for AI agents (Codex, Claude Code): church books, civil, military, deportation…. ⭐ 2.2k
 <!-- TRENDING:END -->
 
 ---
