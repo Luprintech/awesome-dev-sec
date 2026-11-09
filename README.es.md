@@ -236,6 +236,19 @@ El conjunto mínimo de skills, plugins y servidores MCP para construir una app w
 ## Tendencias (auto)
 
 <!-- TRENDING:START -->
+_Detectados automáticamente cada semana (repos nuevos de los últimos 30 días, ≥ 500 ⭐). Sin revisar: pasa los buenos a su sección. Última actualización: 2026-11-09._
+
+**Ciberseguridad**
+
+- [1337isnot1337/DOPPLERGEIST](https://github.com/1337isnot1337/DOPPLERGEIST) - Python tool for aircraft Doppler audio geolocation using historical ADS-B flight data (Source-available). ⭐ 518
+
+**IA y LLMs**
+
+- [N1nEmAn/sapper-v2](https://github.com/N1nEmAn/sapper-v2) - Autonomous pentest legion — AI commander + worker swarm + layered fact-intent graph. 3rd Tencent Intelligent…. ⭐ 1.8k
+
+**Skills de agentes y MCP**
+
+- [alexgaoth/awesome-reverse-engineered](https://github.com/alexgaoth/awesome-reverse-engineered) - Don't reverse engineer it twice. 17,000+ open-source tools built by reverse engineering closed apps, APIs,…. ⭐ 1.3k
 <!-- TRENDING:END -->
 
 ---

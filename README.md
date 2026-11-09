@@ -236,6 +236,19 @@ The minimum set of skills, plugins and MCP servers to build a professional web a
 ## Trending (auto)
 
 <!-- TRENDING:START -->
+_Auto-detected weekly (new repos from the last 30 days, ≥ 500 ⭐). Not reviewed: promote the good ones to a proper section. Last update: 2026-11-09._
+
+**Cybersecurity**
+
+- [1337isnot1337/DOPPLERGEIST](https://github.com/1337isnot1337/DOPPLERGEIST) - Python tool for aircraft Doppler audio geolocation using historical ADS-B flight data (Source-available). ⭐ 518
+
+**AI & LLMs**
+
+- [N1nEmAn/sapper-v2](https://github.com/N1nEmAn/sapper-v2) - Autonomous pentest legion — AI commander + worker swarm + layered fact-intent graph. 3rd Tencent Intelligent…. ⭐ 1.8k
+
+**Agent Skills & MCP**
+
+- [alexgaoth/awesome-reverse-engineered](https://github.com/alexgaoth/awesome-reverse-engineered) - Don't reverse engineer it twice. 17,000+ open-source tools built by reverse engineering closed apps, APIs,…. ⭐ 1.3k
 <!-- TRENDING:END -->
 
 ---
