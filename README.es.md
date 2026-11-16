@@ -236,6 +236,28 @@ El conjunto mínimo de skills, plugins y servidores MCP para construir una app w
 ## Tendencias (auto)
 
 <!-- TRENDING:START -->
+_Detectados automáticamente cada semana (repos nuevos de los últimos 30 días, ≥ 500 ⭐). Sin revisar: pasa los buenos a su sección. Última actualización: 2026-11-16._
+
+**Desarrollo web**
+
+- [opencoredev/islandcn](https://github.com/opencoredev/islandcn) - The open-source Dynamic Island for React, installed with shadcn. ⭐ 766
+- [abdiraimov-otabek/dashboard-design-skill](https://github.com/abdiraimov-otabek/dashboard-design-skill) - A Claude Code skill for clean, honest dashboard UI: KPI tiles, charts, date pickers, ranked lists, states,…. ⭐ 698
+- [ngocanhnckh/renderlint](https://github.com/ngocanhnckh/renderlint) - Lint the rendered UI: catches overflowing text, low contrast, overlaps, broken responsive layouts, emoji…. ⭐ 578
+
+**Ciberseguridad**
+
+- [N1nEmAn/sapper-v2](https://github.com/N1nEmAn/sapper-v2) - The first fruit of the Nüwa tree — an autonomous AI pentest legion (634-team champion, 8h unattended, 1B…. ⭐ 2.1k
+- [1337isnot1337/DOPPLERGEIST](https://github.com/1337isnot1337/DOPPLERGEIST) - Python tool for aircraft Doppler audio geolocation using historical ADS-B flight data (Source-available). ⭐ 607
+- [lordbasex/LordOS](https://github.com/lordbasex/LordOS) - LordOS — a free, fast and secure GNU/Linux distribution based on Debian, with its own desktop environment:…. ⭐ 527
+- [jmanico/grim-prompter](https://github.com/jmanico/grim-prompter) - Threat modeling for AI coding agents: point Claude Code, Codex or any agent at your repo and get an…. ⭐ 508
+
+**IA y LLMs**
+
+- [shinyobjectz/raea](https://github.com/shinyobjectz/raea) - Render Anything Engine: tell your AI what to make. Videos, motion graphics, 3D and games as React and…. ⭐ 2.6k
+
+**Skills de agentes y MCP**
+
+- [morganlinton/BeautifulRust](https://github.com/morganlinton/BeautifulRust) - Agent Skills that teach coding agents to write, review, and port idiomatic Rust, plus a tested clippy config.…. ⭐ 1.8k
 <!-- TRENDING:END -->
 
 ---
